@@ -278,12 +278,9 @@ body {
 }
 .team-social li {
     background-color: #ffffff;
-    border-radius: 50%;
     gap: 10px;
     justify-content: center;
     display: flex;
-    width: 44px;
-    height: 44px;
     align-items: center;
     /* margin-left: 32px;
     margin-right: 32px;
@@ -379,6 +376,7 @@ body {
 .footer-wrapper > .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
 }
 .footer-wrapper > .container > address {
@@ -435,4 +433,5 @@ body {
 address {
     display: flex;
     gap: 70px;
+    flex-wrap: wrap;
 }
