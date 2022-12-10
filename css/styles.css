@@ -24,6 +24,11 @@ a {
 ul {
     list-style: none;
 }
+svg,
+img {
+    vertical-align: middle;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -261,27 +266,27 @@ body {
     display: flex;
     margin: 0 auto;
 }
-.team-list li {
+.team-list > li {
     background: var(--white-background);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
-.team-list span {
-    display: block;
-    margin: 20px;
-}
-.team-social ul {
+
+.team-social {
     display: flex;
-    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
 }
 .team-social li {
     background-color: #ffffff;
-    gap: 10px;
-    justify-content: center;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .team svg {
@@ -290,7 +295,6 @@ body {
 
 .team-social > li:hover {
     background-color: rgba(33, 150, 243, 1);
-    border-radius: 50%;
 }
 .team-social > li:hover > a > svg {
     fill: #ffffff;
@@ -304,38 +308,41 @@ body {
 .clients-list {
     gap: 30px;
     display: flex;
-    margin: 0 auto;
-    width: 170px;
-    height: 92px;
-    justify-content: center;
-    align-items: center;
 }
 .clients-list li {
     border: 1px solid #afb1b8;
     border-radius: 4px;
-}
-.clients svg {
     width: 170px;
     height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients-list > li:hover, 
+.clients-list > li:focus {
+    border-color: var(--blue-text);
 }
 .client-icon {
     fill: #afb1b8;
 }
-.client-icon:hover {
-    fill: #2196f3;
+.clients-list > li:hover > .client-icon,
+.clients-list > li:focus > .client-icon {
+    fill: var(--blue-text);
 }
-.client-icon:focus,
+
 .img-section-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 27px;
+    gap: 30px;
 }
 .img-section-list li {
     background: #ffffff;
-    border: 1px solid #eeeeee;
+    /* border: 1px solid #eeeeee; */
 }
-.img-item {
-    flex-basis: calc((100% - 60px) / 3);
+.img-item > div {
+ border: 1px solid #eeeeee;
+ border-top: none;
+ padding: 20px 0 20px 24px;
 }
 .img-item span {
     display: block;
@@ -346,14 +353,21 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.img-info {
+    padding: 30px 0;
+}
 .img-title {
     color: var(--grey-background);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
+    margin-bottom: 10px;
+    display: block;
 }
 .img-description {
     color: var(--light-grey);
+    margin-bottom: 16px;
+    display: block;
 }
 
 .contact-list-footer {
@@ -366,25 +380,25 @@ body {
     color: var(--white-background);
     text-decoration: none;
     font-size: 14px;
+    line-height: 1.71;
 }
 .footer-wrapper {
     padding: 60px 0;
 }
 .footer-wrapper > .container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 70px;
 }
-.footer-wrapper > .container > address {
+.footer-wrapper > .container > .address-content > address {
     font-style: normal;
+    margin-top: 20px;
 }
 .footer-contact-item {
     color: var(--footer-contact-grey);
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.71;
     font-style: normal;
 }
 .footer-contact-item:hover,
@@ -397,36 +411,38 @@ body {
 
 .social-footer {
     display: flex;
-}
-.social-footer li {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
     gap: 10px;
-    justify-content: center;
-    display: flex;
+}
+.social-footer li > a {
     width: 44px;
     height: 44px;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.social-footer h2 {
+.social-content h2 {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
+    margin: 12px 0 20px;
 }
 .social-footer svg {
     fill: #ffffff;
-    margin: 10px;
 }
-.social-footer li:hover {
+.social-footer > li > a:hover,
+.social-footer > li > a:focus {
     background-color: #2196f3;
 }
-.social-footer li:hover > svg {
+.social-footer > li > a:hover > svg,
+.social-footer > li > a:focus > svg {
     fill: #ffffff;
 }
+
 address {
     display: flex;
     gap: 70px;
