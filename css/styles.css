@@ -274,6 +274,7 @@ body {
 }
 .team-social ul {
     display: flex;
+    flex-direction: row;
 }
 .team-social li {
     background-color: #ffffff;
@@ -284,14 +285,11 @@ body {
     width: 44px;
     height: 44px;
     align-items: center;
-    margin-left: 32px;
+    /* margin-left: 32px;
     margin-right: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
 }
-.team-social svg {
-    width: 20px;
-    height: 20px;
-}
+
 .team svg {
     fill: #afb1b8;
 }
@@ -425,8 +423,6 @@ body {
     color: #ffffff;
 }
 .social-footer svg {
-    width: 20px;
-    height: 20px;
     fill: #ffffff;
     margin: 10px;
 }
