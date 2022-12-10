@@ -86,8 +86,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.navigation-list li a:hover,
-.navigation-list li a:focus {
+.navigation-list > li > a:hover,
+.navigation-list > li > a:focus {
     color: var(--blue-text);
     cursor: pointer;
 }
@@ -98,9 +98,13 @@ body {
     line-height: 1.14;
     font-style: normal;
 }
-.header-contact-list li a:hover,
-.header-contact-list li a:focus {
+.header-contact-list > li > a:hover,
+.header-contact-list > li > a:focus {
     color: var(--blue-text);
+}
+.header-contact-list > li > a:hover,
+.header-contact-list > li > a:focus > svg {
+    fill: var(--blue-text);
 }
 .header-contact-list li a:hover > svg {
     fill: var(--blue-text);
@@ -210,15 +214,15 @@ body {
 }
 
 .articles-list span {
-    width: 65.32px;
-    height: 70px;
+    background-color: rgba(245, 244, 250, 1);
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
     display: flex;
-    margin-bottom: 55px;
     gap: 30px;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-bottom: 55px;
 }
 .articles-list {
     list-style: none;
@@ -273,33 +277,32 @@ body {
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
-
 .team-social {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
-.team-social li {
-    background-color: #ffffff;
+.team-social li > a {
     width: 44px;
     height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.team svg {
+.team-social svg {
     fill: #afb1b8;
 }
-
-.team-social > li:hover {
-    background-color: rgba(33, 150, 243, 1);
+.team-social > li > a:hover,
+.team-social > li > a:focus {
+    background-color: #2196f3;
 }
-.team-social > li:hover > a > svg {
+.team-social > li > a:hover > svg,
+.team-social > li > a:focus > svg {
     fill: #ffffff;
 }
-.team-social:focus,
+
 .clients h2 {
     font-size: 36px;
     text-align: center;
@@ -318,7 +321,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.clients-list > li:hover, 
+.clients-list > li:hover,
 .clients-list > li:focus {
     border-color: var(--blue-text);
 }
@@ -340,9 +343,9 @@ body {
     /* border: 1px solid #eeeeee; */
 }
 .img-item > div {
- border: 1px solid #eeeeee;
- border-top: none;
- padding: 20px 0 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+    padding: 20px 0 20px 24px;
 }
 .img-item span {
     display: block;
